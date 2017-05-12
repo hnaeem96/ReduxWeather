@@ -9,8 +9,7 @@ class WeatherList extends Component {
     const temps = _.map(cityData.list.map(weather => weather.main.temp), (temp) => (temp * 9/5) - 459.67 );
     const pressures = cityData.list.map(weather => weather.main.pressure);
     const humidities = cityData.list.map(weather => weather.main.humidity);
-    const lon = cityData.city.coord.lon;
-    const lat = cityData.city.coord.lat;
+    const { lon, lat } = cityData.city.coord;
 
     return (
       <tr key={name}>
