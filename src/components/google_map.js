@@ -5,14 +5,15 @@ class GoogleMap extends Component {
     let myLatLng = { lat: this.props.lat, lng: this.props.lon }
 
     const Map = new google.maps.Map(this.refs.map, {
-      zoom: 12,
+      zoom: 15,
       center: myLatLng
     });
 
     new google.maps.Marker({
       position: myLatLng,
       map: Map,
-      title: this.props.name
+      title: this.props.name,
+      icon: '../icons/Smile.png'
     })
   }
 
